@@ -1,0 +1,11 @@
+How to chose Priors : [link to Stan Guide](https://github.com/stan-dev/stan/wiki/Prior-Choice-Recommendations)
+
+Key Suggestions for Choosing Priors:
+
+**Standardizing variables** is generally a good practice because it simplifies the specification of priors and improves model performance. By rescaling the predictors priors can be defined more intuitively and consistently across variables, as they operate on a standardized scale. Additionally, standardization enhances the efficiency of sampling methods like MCMC, as it ensures better numerical stability and smoother posterior distributions, leading to faster convergence and more reliable optimization.
+
+**Flat Priors.** To be AVOIDED!
+
+**Weakly Informative Priors.** Use these when strong domain knowledge is lacking, but you still want to avoid uninformative priors. They constrain parameters within reasonable ranges, stabilize estimation, prevent overfitting, and provide a practical starting point for model building without dominating the posterior.
+
+**Specific Informative Priors.** Leverage these when you have reliable prior information or strong domain expertise, particularly for small or noisy datasets, well-studied phenomena, or when constraining parameters to realistic and meaningful bounds.
